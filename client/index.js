@@ -55,6 +55,10 @@ function renderCarList(car) {
          }
       })
       .catch(error => console.log(error));
+      document.getElementById('carMake').value = '';
+      document.getElementById('carModel').value = '';
+      document.getElementById('carYear').value = '';
+      document.getElementById('carURL').value = '';
  });
 
  document.getElementById('editCar').addEventListener('click', (evt) => {
