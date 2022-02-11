@@ -24,13 +24,13 @@ module.exports = {
                     "Cool shirt!",
                     "Your Javascript skills are stellar.",
       ];
-    
       // choose random compliment
       let randomIndex = Math.floor(Math.random() * compliments.length);
       let randomCompliment = compliments[randomIndex];
     
       res.status(200).send(randomCompliment);
     },
+
     getFortune: (req, res) => {
        const fortunes = [
          'Scott is an absolute unit',
@@ -93,9 +93,11 @@ module.exports = {
        let randomFortune = fortunes[randomIndex];
        res.status(200).send(randomFortune);
     },
+
     getAllCars: (req, res) => {
       res.status(200).send(cars);
     },
+
     addCar: (req, res) => {
       let {make, model, year, imgURL} = req.body;
       if (isNaN(+year)) { res.status(400).send('Must enter a number for the year'); }
@@ -111,12 +113,14 @@ module.exports = {
       console.log(cars);
       res.status(200).send(cars);
     },
+
     getCar: (req, res) => {
       const index = +req.params.id;
       for(let i = 0; i < cars.length; i++) {
          if (cars[i].id === index) { res.status(200).send(cars[i]); }
       }
     },
+
     editCar: (req, res) => {
       const index = +req.params.id;
       let {make, model, year, imgURL} = req.body;
@@ -131,11 +135,11 @@ module.exports = {
       }
 
     },
+
     deleteCar: (req, res) => {
       if(+req.params.id === NaN) { res.status(400).send('Must send a number for the car you wish to delete');}
       const index = cars.findIndex(elem => elem.id === +req.params.id);
       cars.splice(index, 1);
       res.status(200).send(cars);
     }
-
 }
