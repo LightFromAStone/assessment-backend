@@ -1,0 +1,11 @@
+button:hover {
+   cursor: pointer;
+}
+
+.carPicture {
+   max-width: 500px;
+}
+
+.hidden {
+   display: none;
+}

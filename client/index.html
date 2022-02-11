@@ -2,9 +2,35 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
+    <button id="fortuneButton">Dare ye a fortune?</button>
+    <br><br><br><br>
+
+    <form id="carSubmit">
+      <input type="text" id="carMake" placeholder="Make">
+      <input type="text" id="carModel" placeholder="Model">
+      <input type="text" id="carYear" placeholder="Year">
+      <input type="text" id="carURL" placeholder="Image URL">
+      <button id="addCar">Add Car</button>
+    </form>
+
+    <button id="getCars">List All Cars</button>
+    <form id="editDelete">
+      <input type="text" id="carIndex" placeholder="Car Index">
+      <button id="editCar">Edit a Car</button>
+      <button id="deleteCar">Delete a Car</button>
+    </form>
+    <form class="hidden" id="carEdit">
+      <input type="text" id="editMake" placeholder="Make">
+      <input type="text" id="editModel" placeholder="Model">
+      <input type="text" id="editYear" placeholder="Year">
+      <input type="text" id="editURL" placeholder="Image URL">
+      <button id="addEditCar">Edit Car</button>
+    </form>
+    <section id="carList"></section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
